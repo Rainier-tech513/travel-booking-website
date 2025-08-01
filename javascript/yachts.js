@@ -1,6 +1,6 @@
 export const yachts = [
     {
-      image: "../images/yacht-apho.jpg",
+      image: "images/yacht-apho.jpg",
       name: "Apho",
       specs: {
         length: "115.1m (377'7ft)",
@@ -11,7 +11,7 @@ export const yachts = [
       },
       pricepweek: '2,600,000',
     }, {
-      image: "../images/yacht-apho.jpg",
+      image: "images/yacht-apho.jpg",
       name: "Apho",
       specs: {
         length: "115.1m (377'7ft)",
@@ -22,7 +22,7 @@ export const yachts = [
       },
       pricepweek: '2,600,000',
     }, {
-      image: "../images/yacht-apho.jpg",
+      image: "images/yacht-apho.jpg",
       name: "Apho",
       specs: {
         length: "115.1m (377'7ft)",
@@ -33,7 +33,7 @@ export const yachts = [
       },
       pricepweek: '2,600,000',
     }, {
-      image: "../images/yacht-apho.jpg",
+      image: "images/yacht-apho.jpg",
       name: "Apho",
       specs: {
         length: "115.1m (377'7ft)",

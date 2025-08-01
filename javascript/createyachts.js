@@ -19,23 +19,23 @@ yachts.forEach((yacht) => {
 
                 <div class="specs">
                     <div class="spec">
-                        <img src="../images/size.png">
+                        <img src="images/size.png">
                         <p>${yacht.specs.length}</p>
                     </div>
                     <div class="spec">
-                        <img src="../images/guests.png">
+                        <img src="images/guests.png">
                         <p>${yacht.specs.guests} Guests</p>
                     </div>
                     <div class="spec">
-                        <img src="../images/main-bed.png">
+                        <img src="images/main-bed.png">
                         <p>${yacht.specs.cabins} Cabins</p>
                     </div>
                     <div class="spec">
-                        <img src="../images/warehouse.png">
+                        <img src="images/warehouse.png">
                         <p>${yacht.specs.builtat}</p>
                     </div>
                     <div class="spec">
-                        <img src="../images/calender.png">
+                        <img src="images/calender.png">
                         <p>${yacht.specs.builtin}</p>
                     </div>
                 </div>
