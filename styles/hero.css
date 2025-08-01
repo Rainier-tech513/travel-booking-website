@@ -19,13 +19,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Zwarte overlay met 50% dekking */
-    z-index: 1; /* Zorgt dat de overlay boven de achtergrond ligt */
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
 }
 
 .hero * {
-    position: relative; /* Zorgt dat tekst en andere inhoud boven de overlay ligt */
-    z-index: 2; /* Plaats inhoud boven de overlay */
+    position: relative; 
+    z-index: 2; 
 }
 
 
@@ -175,9 +175,11 @@
 .yacht-grid::-webkit-scrollbar {
     display: none; /*verwijder die scrollbar*/
 }
+
+/* zodat het werkt op alle broswers is dit*/
 .yacht-grid {
-    -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
-    scrollbar-width: none; /* Voor Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 @media (max-width: 768px) {

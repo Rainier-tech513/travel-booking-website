@@ -58,9 +58,10 @@
     display: none; /*verbergt die scrollbar*/
 }
 
+/*zodat het werkt op alle broswers*/
 .popular-yacht-grid {
-    -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
-    scrollbar-width: none; /* Voor Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
 }
 
 .grid-info {

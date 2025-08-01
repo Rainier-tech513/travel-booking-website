@@ -49,16 +49,16 @@ const gridElement = document.querySelector('.js-popular-yacht-grid');
 if (gridElement) {
     gridElement.innerHTML = yachtsHTML;
 
-    // Dynamisch de breedte van een kaart bepalen
+
     const firstCard = gridElement.querySelector('.card');
-    let cardWidth = firstCard ? firstCard.offsetWidth : 458; // Standaard 458px als fallback
+    let cardWidth = firstCard ? firstCard.offsetWidth : 458; 
 
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
 
     let scrollPosition = 0;
 
-    // Functie om te schuiven
+
     function scrollGrid(direction) {
         const maxScroll = gridElement.scrollWidth - gridElement.clientWidth;
         if (direction === 'right') {
@@ -71,11 +71,11 @@ if (gridElement) {
         gridElement.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
 
-    // Event listeners voor pijlen
+    
     rightArrow.addEventListener('click', () => scrollGrid('right'));
     leftArrow.addEventListener('click', () => scrollGrid('left'));
 
-    // Optioneel: Herbereken cardWidth bij resize voor responsiviteit
+    
     window.addEventListener('resize', () => {
         const updatedCard = gridElement.querySelector('.card');
         cardWidth = updatedCard ? updatedCard.offsetWidth : cardWidth;
