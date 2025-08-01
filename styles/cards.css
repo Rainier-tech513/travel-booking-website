@@ -1,0 +1,108 @@
+.card {
+    width: 458px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    flex-shrink: 0; /*cards worden niet kleiner*/
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 72dvw;
+    }
+}
+
+.label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 30px;
+    bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    .label {
+        bottom: -1px;
+        left: 20px;
+    }
+}
+
+.label p {
+    color: #FA4616;
+    font-size: 14px;
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+}
+
+
+
+
+
+.image-card-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-card-container img {
+    width: 100%;
+    display: block;
+}
+
+.text-card-container {
+    margin-bottom: 17px;
+    margin-left: 22px;
+}
+
+@media (max-width: 768px) {
+    .text-card-container {
+        margin-bottom: 15px;
+        margin-left: 20px;
+    }
+}
+
+.text-card-container h3 {
+    margin-top: 22px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #333;
+    font-size: 30px;
+    font-family: 'Lora';
+}
+
+
+
+.text-card-container p,
+.specs p {
+    font-size: 15px;
+    color: #333;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.specs img {
+    width: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 6px;
+}
+
+.specs p {
+    display: inline-block;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.specs {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 17px;
+    row-gap: 4px;
+    margin-top: 20px;
+}
+

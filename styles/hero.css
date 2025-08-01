@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.hero {
+    height: 90dvh;
+    width: 100%;
+    background-image: url('../images/hero.jpeg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Zwarte overlay met 50% dekking */
+    z-index: 1; /* Zorgt dat de overlay boven de achtergrond ligt */
+}
+
+.hero * {
+    position: relative; /* Zorgt dat tekst en andere inhoud boven de overlay ligt */
+    z-index: 2; /* Plaats inhoud boven de overlay */
+}
+
+
+.info-hero {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.info-hero h1 {
+    color: white;
+    font-size: clamp(2.6rem, calc(7vw + 1rem), 3rem);
+    margin-bottom: 20px;
+    font-family: 'Lora';
+    font-weight: 600;
+}
+
+.info-hero p {
+    font-family: 'Lora';
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-ctas {
+    flex-direction: row;
+}
+
+.main-cta {
+    padding: 10px 19px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    background-color: #FA4616; 
+    border-radius: 50px;
+    margin: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.2), 
+        inset 0 2px 8px rgba(255, 255, 255, 0.3); 
+}
+
+.main-cta:hover {
+    background-color: #ff5e30; 
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.3), 
+        inset 0 3px 12px rgba(255, 255, 255, 0.4); 
+    transform: translateY(-2px); 
+}
+
+.main-cta:active {
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.15), 
+        inset 0 1px 5px rgba(255, 255, 255, 0.2);
+    transform: translateY(0); 
+}
+
+.second-cta {
+    padding: 10px 19px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: #fff solid 1px;
+
+    background: rgba(255, 255, 255, 0.01); 
+    backdrop-filter: blur(2px) saturate(100%); 
+    -webkit-backdrop-filter: blur(2px) saturate(100%);  
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+
+    transition: all 0.3s ease;
+    position: relative;
+    isolation: isolate;
+}
+
+.second-cta:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px); 
+}
+
+.second-cta:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.15), 
+        inset 0 1px 5px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+.popular-yachts-grids {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    height: 200px;
+    flex-direction: column;
+}
+
+.grid-header {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.grid-header p {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.hr-2 {
+    height: 1px;
+    margin: 0; 
+    flex: 1;
+    background-color: white;
+    border: none;
+}
+
+
+
+.yacht-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.yacht-grid::-webkit-scrollbar {
+    display: none; /*verwijder die scrollbar*/
+}
+.yacht-grid {
+    -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
+    scrollbar-width: none; /* Voor Firefox */
+}
+
+@media (max-width: 768px) {
+    .popular-yachts-grids {
+        width: 80dvw;
+    }
+}
+
+.hero-yacht-card img {
+    width: 100%;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+

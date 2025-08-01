@@ -1,0 +1,104 @@
+.card-containerr {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+}
+
+.headerrr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #f1f1f1;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .headerrr {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+
+.headerrr h1 {
+    color: #FA4616;
+    font-size: 32px;
+    font-family: 'Lora';
+    font-weight: 300;
+}
+
+.headerrr button {
+    padding: 10px 19px;
+    color: #FA4616;
+    cursor: pointer;
+    border: 1px solid #FA4616;
+    font-size: 14px;
+    background-color: transparent; 
+    border-radius: 50px;
+    font-family: 300;
+}
+
+.popular-yacht-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    overflow-x: auto; /*hierdoor kan je scrollen*/
+    white-space: nowrap; /*divs wrappen niet*/
+    margin-right: 20px;
+}
+
+.popular-yacht-grid::-webkit-scrollbar {
+    display: none; /*verbergt die scrollbar*/
+}
+
+.popular-yacht-grid {
+    -ms-overflow-style: none; /* Voor Internet Explorer en Edge */
+    scrollbar-width: none; /* Voor Firefox */
+}
+
+.grid-info {
+    margin-left: 30px;
+   
+}
+
+.yacht-grid-btn-container {
+    margin-right: 30px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .yacht-grid-btn-container {
+        justify-content: flex-start;
+        
+    }
+}
+
+.arrow-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+.arrow-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.arrow-grid img {
+    width: 44px;
+    cursor: pointer;
+}
