@@ -1,0 +1,186 @@
+.bottom-contact-form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/ocean.jpg');
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bottom-contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    padding: 50px 100px;
+    width: 50%;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .bottom-contact-form {
+        padding: 40px 22px;
+        width: 70%;
+    }
+
+}
+
+.contact-header-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.contact-header-container h3 {
+    color: #333;
+    font-size: 32px;
+    font-family: 'Lora';
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .contact-header-container {
+        font-size: 18px;
+    }
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .input-row {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .input-container {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    gap: 7px;
+}
+
+.input-container label {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #333;
+}
+
+.input-container input {
+    padding: 10px 15px;
+    border-radius: 0;
+    border: 1px solid #333;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    gap: 0px;
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-radio {
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+.radio-radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #FA4616;
+    border-radius: 50%;
+
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio-input:checked + .radio-radio::after {
+    transform: scale(1);
+}
+
+.question label {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #333;
+}
+
+.radios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.input-container textarea {
+    resize: vertical; 
+    width: 270px; 
+    height: 80px; 
+    padding: 10px 15px;
+}
+
+.contact-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.contact-button-container button {
+    padding: 10px 19px;
+    border-radius: 30px;
+    background-color: #FA4616;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-button-container button:hover {
+    background-color: #ff5e30; 
+    transform: translateY(-2px); 
+}
+
+.contact-button-container button:active {
+    transform: translateY(0); 
+}

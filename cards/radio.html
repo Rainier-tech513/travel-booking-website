@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .radio {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .radio-input {
+            display: none;
+        }
+
+        .radio-radio {
+            width: 1.5em;
+            height: 1.5em;
+            border: 1px solid #333;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-sizing: border-box;
+            padding: 3px;
+        }
+
+        .radio-radio::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: #FA4616;
+            border-radius: 50%;
+
+            transform: scale(0);
+            transition: transform 0.15s;
+        }
+
+        .radio-input:checked + .radio-radio::after {
+            transform: scale(1);
+        }
+
+        .question label {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            color: #333;
+        }
+
+        .radios {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="radio-container">
+        <div class="question">
+            <label>DO YOU HAVE A LOCATION IN MIND?</label>
+        </div>
+
+        <div class="radios">
+            <label for="MyRadioId1" class="radio">
+                <input type="radio" id="MyRadioId1" name="location" class="radio-input" value="The CarriBean">
+                <div class="radio-radio"></div>
+                The CarriBean
+            </label>
+
+            <label for="MyRadioId2" class="radio">
+                <input type="radio" id="MyRadioId2" name="location" class="radio-input" value="The Mediterranean">
+                <div class="radio-radio"></div>
+                The Mediterranean
+            </label>
+
+            <label for="MyRadioId3" class="radio">
+                <input type="radio" id="MyRadioId3" name="location" class="radio-input" value="other">
+                <div class="radio-radio"></div>
+                Other
+            </label>
+        </div>
+    </div>
+    
+</body>
+</html>
