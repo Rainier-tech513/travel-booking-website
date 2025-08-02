@@ -63,7 +63,7 @@
     }
 
     .input-container {
-        width: 100%;
+        width: 100% !important;
         max-width: none;
     }
 }
@@ -99,6 +99,13 @@
     justify-content: flex-start;
     width: 50%;
     gap: 0px;
+}
+
+@media (max-width: 768px) {
+    .radio-container {
+        width: 100% !important;
+        max-width: none;
+    }
 }
 
 .radio {
@@ -157,6 +164,12 @@
     width: 270px; 
     height: 80px; 
     padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+    .input-container textarea {
+        width: 200px;
+    }
 }
 
 .contact-button-container {

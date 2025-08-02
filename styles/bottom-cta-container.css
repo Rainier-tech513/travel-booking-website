@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40dvh;
     width: 100%;
+    padding: 90px 0;
 }
  
 .bottom-cta {
@@ -24,6 +24,12 @@
     font-weight: 300;
     color: #FA4616;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .bottom-cta h3 {
+        font-size: 30px;
+    }
 }
 
 .bottom-cta button {
