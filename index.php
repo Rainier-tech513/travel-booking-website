@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whop</title>
     <link rel="icon" type="image/png" href="images/whop_favicon_orange.png">
-    <link rel="stylesheet" href="styles/other/header.css">
+    
     <link rel="stylesheet" href="styles/other/general.css">
     <link rel="stylesheet" href="styles/homepage/hero.css">
     <link rel="stylesheet" href="styles/homepage/mid-section.css">
@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    
+    <?php require_once 'header.php'; ?>
 
     <section class="hero">
         <div class="info-hero">
