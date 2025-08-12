@@ -20,9 +20,9 @@ jobs:
           server: 5018097307.ssh.w2.strato.hosting
           username: ${{ secrets.FTPUSERNAME }}
           password: ${{ secrets.FTPPASSWORD }}
-          protocol: sftp
+          protocol: ftps
           port: 22
           local-dir: ./
-          server-dir: public_html/
+          server-dir: /public_html/
 
 
