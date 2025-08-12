@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="images/whop_favicon_orange.png">
     
     <link rel="stylesheet" href="styles/other/general.css">
-    <link rel="stylesheet" href="styles/homepage/hero.css">
+    
     <link rel="stylesheet" href="styles/homepage/mid-section.css">
     <link rel="stylesheet" href="styles/homepage/mid-section-2.css">
     <link rel="stylesheet" href="styles/homepage/card-container.css">
