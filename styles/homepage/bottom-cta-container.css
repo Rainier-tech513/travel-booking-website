@@ -30,6 +30,11 @@
     .bottom-cta h3 {
         font-size: 30px;
     }
+
+    .bottom-cta {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 .bottom-cta button {

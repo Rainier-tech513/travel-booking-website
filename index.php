@@ -1,3 +1,10 @@
+<?php  
+    require_once 'includes/config-session.php';
+    require_once 'includes/signup_view.php';
+    require_once 'includes/login_view.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,65 +12,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whop</title>
     <link rel="icon" type="image/png" href="images/whop_favicon_orange.png">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/mid-section.css">
-    <link rel="stylesheet" href="styles/mid-section-2.css">
-    <link rel="stylesheet" href="styles/card-container.css">
-    <link rel="stylesheet" href="styles/cards.css">
-    <link rel="stylesheet" href="styles/bottom-cta-container.css">
-    <link rel="stylesheet" href="styles/bottom-contact-form.css">
+    <link rel="stylesheet" href="styles/other/header.css">
+    <link rel="stylesheet" href="styles/other/general.css">
+    <link rel="stylesheet" href="styles/homepage/hero.css">
+    <link rel="stylesheet" href="styles/homepage/mid-section.css">
+    <link rel="stylesheet" href="styles/homepage/mid-section-2.css">
+    <link rel="stylesheet" href="styles/homepage/card-container.css">
+    <link rel="stylesheet" href="styles/homepage/cards.css">
+    <link rel="stylesheet" href="styles/homepage/bottom-cta-container.css">
+    <link rel="stylesheet" href="styles/homepage/bottom-contact-form.css">
 </head>
 <body>
-    
-    <nav class="header">
-        <div class="left-side">
-            <img src="images/logoo.svg" width="50">
-        </div>
 
-
-        <div class="center-side">
-            <ul>
-                <li><a href="#">My Bookings</a></li>
-                <li><a href="#">Our Fleet</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Gallery</a></li>
-            </ul>
-        </div>
-
-
-        <div class="right-side">
-            <button>Sign Up</button>
-
-            <div class="hamburger-menu" onclick="openSidebar()">
-                <img src="images/hamburger-menu.png">
-            </div>
-
-            <div class="sidebar">
-                <div class="greeting">
-                    <img src="images/close-sidebar-cross.png" class="close-sidebar-cross" onclick="closeSidebar()">
-                    <div class="profile-picture">
-                        <img src="images/profile-picturee.png">
-                    </div>
-                    <div>
-                        <h3>Hello,</h3>
-                        <p>Luna</p>
-                    </div>
-                </div>
-                <hr class="hr-1">
-                <ul>
-                    <li><a href="#">My Bookings</a></li>
-                    <li><a href="#">Our Fleet</a></li>
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">Gallery</a></li>
-                </ul>
-                <div class="logout">
-                    <li><a href="#">Logout</a></li>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php require_once 'header.php'; ?>
 
     <section class="hero">
         <div class="info-hero">
