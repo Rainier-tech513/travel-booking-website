@@ -21,4 +21,5 @@ jobs:
           username: ${{ secrets.FTPUSERNAME }}
           password: ${{ secrets.FTPPASSWORD }}
           protocol: sftp
+          local-dir: ./
           server-dir: /public_html # waar op de server wil je het neerzetten?
