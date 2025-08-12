@@ -62,8 +62,7 @@ if (isset($_POST["reset-request-submit"])) {
     mail($to, $subject, $message, $headers);
 
     header("Location ../reset-password.php?reset=success");
-
-
+    
 } else {
     header("Location: ../index.php");
     die();
