@@ -20,5 +20,5 @@ jobs:
           server: ftp.fit-track.nl
           username: ${{ secrets.FTPUSERNAME }}
           password: ${{ secrets.FTPPASSWORD }}
-          protocol: ftps
-          server-dir: public_html/travel-booking-website/ # waar op de server wil je het neerzetten?
+          protocol: sftp
+          server-dir: /public_html # waar op de server wil je het neerzetten?
