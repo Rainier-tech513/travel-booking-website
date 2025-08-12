@@ -20,6 +20,5 @@ jobs:
           server: ftp.fit-track.nl
           username: ${{ secrets.FTPUSERNAME }}
           password: ${{ secrets.FTPPASSWORD }}
-          protocol: sftp
-          local-dir: ./            # welke lokale map wil je uploaden? (bijv. ./ of ./dist)
-          server-dir: /public_html # waar op de server wil je het neerzetten?
+          protocol: ftps
+          server-dir: public_html/travel-booking-website/ # waar op de server wil je het neerzetten?
