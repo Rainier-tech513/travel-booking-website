@@ -1,13 +1,23 @@
 <?php
 
-// the are manditory. for your config-session file. either change them in your ini directory in your xampp folder, orhere in the code
+// the are manditory. for your config-session file. either change them in your ini directory in your xampp folder, or here in the code
 ini_set('session.use_only_cookies', 1);
 ini_set('session.use_strict_mode', 1);
 
-// a function
+
+// als we lokaal runnen vs als we online runnen
+if ($_SERVER['SERVER_NAME'] === 'localhost') {
+	// Lokaal
+	$domain = 'localhost';
+} else {
+	// Online
+	$domain = 'fit-track.nl';
+}
+
+// a function with a function in it
 session_set_cookie_params([
-	'lifetime' => 1800, // duration of the cookie id session, 1800 seconds / 30min
-	'domain' => 'fit-track.nl', // our own domain. If your running online, then: 'fit-track.nl'
+	'lifetime' => 1800, // duration of the cookie id session, 30min
+	'domain' => $domain,
 	'path' => '/', // works on all paths
 	'secure' => true, // only https 
 	'httponly' => true // nobody can inject for example code to do something with the session
