@@ -30,9 +30,9 @@
 
                         <form class="login-form" method="post" action="includes/reset-password.inc.php">
 
-                            <input type="hidden" name="selector" value="<?php $selector; ?>">
+                            <input type="hidden" name="selector" value="<?php echo htmlspecialchars($selector); ?>">
 
-                            <input type="hidden" name="validator" value="<?php $validator; ?>">
+                            <input type="hidden" name="validator" value="<?php echo htmlspecialchars($validator); ?>">
 
                             <label for="pwd">Password
                                 <input type="password" id="pwd" name="pwd">

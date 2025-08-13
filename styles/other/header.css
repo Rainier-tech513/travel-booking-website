@@ -38,6 +38,7 @@
 .center-side {
     width: auto;
     font-size: 14px;
+    font-weight: 400;
 }
 
 .center-side ul {
@@ -208,7 +209,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    bottom: 30px;
+    bottom: 50px;
     height: 100%;
     width: 100%;
 }

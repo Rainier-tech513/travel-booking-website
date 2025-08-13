@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    
+    <?php require_once 'header.php'; ?>
 
     <section class="hero">
         <div class="info-hero">
@@ -135,7 +135,6 @@
             </div>
         </div>
     </section>
-
     
     <section class="card-containerr">
         <div class="grid-info">

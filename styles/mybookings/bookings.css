@@ -1,0 +1,175 @@
+body {
+    background-color: #f9fafb;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 40px 0px
+}
+
+.bookings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    margin: 0px 30px;
+    padding: 38px;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mybookings-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 30px 35px;
+    margin-top: 10px;
+}
+
+.mybookings-title-container h1 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 500
+}
+    
+
+.mybookings-title-container p {
+    font-size: 18px;
+    color: gray;
+}
+
+.row {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title p:first-child {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+
+.title p:nth-child(2) {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #81715a;
+    background-color: #fef9c3;
+    border-radius: 16px;
+    max-width: fit-content;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.price-container p:first-child {
+    font-size: 26px;
+    font-weight: 600;
+    color: #FA4616;
+}
+
+.price-container p:nth-child(2) {
+    color: #333;
+    text-align: right;
+    font-size: 14px;
+}
+
+.detail-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.detail-container img {
+    width: 26px;
+    vertical-align: middle;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.details p:first-child {
+    font-size: 14px;
+    color: gray;
+}
+
+.details p:nth-child(2) {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.booking-container-hr {
+    height: 1px;
+    background-color: #e0e0e0;
+    border: none;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.special-requests-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.special-requests-container p:first-child {
+    font-size: 14px;
+    color: gray;
+}
+
+.special-requests-containers p:nth-child(2) {
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .row-2 {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .row-1 {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .price-container {
+        text-align: left;
+    }
+
+    .price-container p:first-child,
+    .price-container p:nth-child(2) {
+        text-align: left;
+    }
+
+    .bookings-container {
+        width: 65%;
+    }
+}

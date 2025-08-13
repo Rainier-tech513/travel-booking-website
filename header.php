@@ -9,8 +9,8 @@
     <div class="center-side">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">My Bookings</a></li>
-            <li><a href="productpage.php">Our Fleet</a></li>
+            <li><a href="mybookings.php">My Bookings</a></li>
+            <li><a href="our-fleet.php">Our Fleet</a></li>
             <li><a href="#">Destinations</a></li>
             <li><a href="#">Gallery</a></li>
         </ul>
@@ -73,8 +73,8 @@
                     }
                 ?>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">My Bookings</a></li>
-                <li><a href="productpage.php">Our Fleet</a></li>
+                <li><a href="mybookings.php">My Bookings</a></li>
+                <li><a href="our-fleet.php">Our Fleet</a></li>
                 <li><a href="#">Destinations</a></li>
                 <li><a href="#">Gallery</a></li>
             </ul>

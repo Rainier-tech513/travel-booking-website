@@ -44,45 +44,4 @@ yachts.forEach((yacht) => {
     `;
 })
 
-const gridElement = document.querySelector('.js-popular-yacht-grid');
-if (gridElement) {
-    gridElement.innerHTML = yachtsHTML;
-
-
-    const firstCard = gridElement.querySelector('.card');
-    let cardWidth = firstCard ? firstCard.offsetWidth : 458; 
-
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-
-    let scrollPosition = 0;
-
-
-    function scrollGrid(direction) {
-        const maxScroll = gridElement.scrollWidth - gridElement.clientWidth;
-        if (direction === 'right') {
-            scrollPosition += cardWidth;
-            if (scrollPosition > maxScroll) scrollPosition = maxScroll;
-        } else if (direction === 'left') {
-            scrollPosition -= cardWidth;
-            if (scrollPosition < 0) scrollPosition = 0;
-        }
-        gridElement.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    }
-
-    
-    rightArrow.addEventListener('click', () => scrollGrid('right'));
-    leftArrow.addEventListener('click', () => scrollGrid('left'));
-
-    
-    window.addEventListener('resize', () => {
-        const updatedCard = gridElement.querySelector('.card');
-        cardWidth = updatedCard ? updatedCard.offsetWidth : cardWidth;
-    });
-} else {
-    console.error('Element met klasse "js-popular-yacht-grid" niet gevonden.');
-}
-
-
-
 document.querySelector('.yacht-fleet-grid').innerHTML = yachtsHTML;

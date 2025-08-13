@@ -5,7 +5,7 @@ ini_set('session.use_only_cookies', 1);
 ini_set('session.use_strict_mode', 1);
 
 
-// als we lokaal runnen vs als we online runnen
+
 if ($_SERVER['SERVER_NAME'] === 'localhost') {
 	// Lokaal
 	$domain = 'localhost';
@@ -13,6 +13,7 @@ if ($_SERVER['SERVER_NAME'] === 'localhost') {
 	// Online
 	$domain = 'fit-track.nl';
 }
+
 
 // a function with a function in it
 session_set_cookie_params([
@@ -52,8 +53,6 @@ if (isset($_SESSION["user_id"])) {
 		}
 	}
 }
-
-
 
 
 

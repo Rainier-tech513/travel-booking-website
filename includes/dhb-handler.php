@@ -20,6 +20,8 @@ if ($_SERVER['SERVER_NAME'] === 'localhost') {
 	$dbpassword = '4!S3qwCuQnqB9SJ';
 }
 
+
+
 try {
 	$pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -43,5 +43,17 @@ export const yachts = [
         builtin: 2023
       },
       pricepweek: '600,000',
+      
+    }, {
+      image: "images/flying-fox-yacht.png",
+      name: "Flying Fox",
+      specs: {
+        length: "139m (446ft)",
+        guests: 22,
+        cabins: 11,
+        builtat: "Lurssen",
+        builtin: 2024
+      },
+      pricepweek: '2,600,000',
     }];
    
