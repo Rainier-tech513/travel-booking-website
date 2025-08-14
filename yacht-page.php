@@ -2,6 +2,21 @@
     require_once 'includes/config-session.php';
     require_once 'includes/signup_view.php';
     require_once 'includes/login_view.php';
+    require_once 'includes/dhb-handler.php';
+
+    if (!isset($_GET['slug'])) {
+        die("Geen yacht geselecteerd.");
+    }
+
+    $slug = $_GET['slug'];
+
+    $stmt = $pdo->prepare("SELECT * FROM yachts WHERE slug = ?");
+    $stmt->execute([$slug]);
+    $yacht = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$yacht) {
+        die("Yacht niet gevonden.");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title><?= htmlspecialchars($yacht['name']) ?> Yacht</title>
     <link rel="icon" type="image/png" href="images/whop_favicon_orange.png">
     <link rel="stylesheet" href="styles/other/header.css">
     <link rel="stylesheet" href="styles/other/general.css">

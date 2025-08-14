@@ -6,14 +6,14 @@
 // then your set
 
 if ($_SERVER['SERVER_NAME'] === 'localhost') {
-    // Lokale database
+    // lokale database
     $host = 'localhost';
     $dbusername = 'root';
     $dbpassword = '';
     $dbname = 'testdatabase';
 
 } else {
-    // Online database
+    // online database
     $host = "database-5018102833.webspace-host.com";
 	$dbname = 'dbs14373138';
 	$dbusername = 'dbu2056935';

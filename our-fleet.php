@@ -5,12 +5,10 @@
     require_once 'includes/dhb-handler.php';
 
     try {
-        // Ophalen van alle yachts
+        // ophalen van alle yachts
         $stmt = $pdo->query("SELECT * FROM yachts");
         $yachts = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-        // Test: even printen
-        // print_r($yachts);
     } catch (PDOException $e) {
         echo "Fout bij ophalen yachts: " . $e->getMessage();
     }
@@ -55,7 +53,7 @@
                         <option value="1-2M">€1M - €2M</option>
                         <option value="2-3M">€2M - €3M</option>
                         <option value="3-5M">€3M - €5M</option>
-                        <option value="5+M">€5M+</option>
+                        <option value="5M+">€5M+</option>
                     </select>
                 </div>
 
@@ -73,7 +71,7 @@
                 <div class="dropdown">
                     <label for="Type">Type</label>
                     <select id="Type" name="type">
-                        <option value="any-type">Any price</option>
+                        <option value="any-type">Any type</option>
                         <option value="motor-yacht">Motor Yacht</option>
                         <option value="sailing-yacht">Sailing Yacht</option>
                         <option value="explorer">Explorer</option>
@@ -84,7 +82,7 @@
                 <div class="dropdown">
                     <label for="length">Length</label>
                     <select id="length" name="length">
-                        <option value="any">Any price</option>
+                        <option value="any-length">Any length</option>
                         <option value="50-80m">50m - 80m</option>
                         <option value="80-100m">80m - 100m</option>
                         <option value="100-120m">100m - 120m</option>
@@ -95,6 +93,7 @@
 
             </div>
 
+            <!--TODO. VOOR MOBILE VERSIE. check: https://app--whop-8395166b.base44.app/Fleet -->
             <div class="row-2-v2">
                 <div>
                     <p>Filters</p>
@@ -105,53 +104,57 @@
     </section>
 
     <section class="yacht-fleet-container">
-        <div class="yachts-available">
-            <p>6 yachts available</p>
+        <div class="yachts-available">  
+            <p>Yachts available: 6</p>
         </div>
         <div class="yacht-fleet-grid">
-            
-        <?php foreach ($yachts as $yacht): ?>
-            <div class="card">
-                <div class="image-card-container">
-                    <img src="<?= htmlspecialchars($yacht['image'] ?? 'images/default-yacht.jpg') ?>" alt="<?= htmlspecialchars($yacht['name']) ?>">
-                    <div class="label">
-                        <p>CHARTER</p>
-                    </div>
-                </div>
-                <div class="text-card-container">
-                    <h3><?= htmlspecialchars($yacht['name']) ?></h3>
-                    <p>From €<?= number_format($yacht['price_per_week'], 2) ?> EUR/per week</p>
 
-                    <div class="specs">
-                        <div class="spec">
-                            <img src="images/size.png" alt="Length">
-                            <p><?= (float)$yacht['length_meters'] ?> m</p>
+            <!--check of dit werkt bij volgende online test-->
+            <?php foreach ($yachts as $yacht): ?>
+                <a href="/our-fleet/yacht-page.php?slug=<?= urlencode($yacht['slug']) ?>" class="yacht-card-aelement">
+                    <div class="card">
+                        <div class="image-card-container">
+                        <img src="<?= htmlspecialchars($yacht['yacht_img'] ?? 'images/default-yacht.jpg') ?>" 
+                        alt="<?= htmlspecialchars($yacht['name']) ?>">
+                            <div class="label">
+                                <p>CHARTER</p>
+                            </div>
                         </div>
-                        <div class="spec">
-                            <img src="images/guests.png" alt="Guests">
-                            <p><?= (int)$yacht['capacity'] ?> Guests</p>
-                        </div>
-                        <div class="spec">
-                            <img src="images/main-bed.png" alt="Cabins">
-                            <p><?= (int)$yacht['cabins'] ?> Cabins</p>
-                        </div>
-                        <div class="spec">
-                            <img src="images/warehouse.png" alt="Built at">
-                            <p><?= htmlspecialchars($yacht['built_at']) ?></p>
-                        </div>
-                        <div class="spec">
-                            <img src="images/calender.png" alt="Built in">
-                            <p><?= (int)$yacht['built_in'] ?></p>
+                        <div class="text-card-container">
+                            <h3><?= htmlspecialchars($yacht['name']) ?></h3>
+                            <p>From €<?= number_format($yacht['price_per_week'], 2) ?> EUR/per week</p>
+
+                            <div class="specs">
+                                <div class="spec">
+                                    <img src="images/size.png" alt="Length">
+                                    <p><?= (float)$yacht['length_meters'] ?>m &lpar;<?= (float)$yacht['length_feet'] ?>ft&rpar;</p>
+                                </div>
+                                <div class="spec">
+                                    <img src="images/guests.png" alt="Guests">
+                                    <p><?= (int)$yacht['capacity'] ?> Guests</p>
+                                </div>
+                                <div class="spec">
+                                    <img src="images/main-bed.png" alt="Cabins">
+                                    <p><?= (int)$yacht['cabins'] ?> Cabins</p>
+                                </div>
+                                <div class="spec">
+                                    <img src="images/warehouse.png" alt="Built at">
+                                    <p><?= htmlspecialchars($yacht['built_at']) ?></p>
+                                </div>
+                                <div class="spec">
+                                    <img src="images/calender.png" alt="Built in">
+                                    <p><?= (int)$yacht['built_in'] ?></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
+                </a>
+            <?php endforeach; ?>
             
         </div>
     </section>
     
 
-    <!--<script type="module" src="javascript/create-yacht-fleet.js"></script>-->
+    
 </body>
 </html>
