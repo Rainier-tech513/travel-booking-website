@@ -82,7 +82,3 @@ if (gridElement) {
 } else {
     console.error('Element met klasse "js-popular-yacht-grid" niet gevonden.');
 }
-
-
-
-document.querySelector('.yacht-fleet-grid').innerHTML = yachtsHTML;

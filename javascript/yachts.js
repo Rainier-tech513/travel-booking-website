@@ -54,6 +54,6 @@ export const yachts = [
         builtat: "Lurssen",
         builtin: 2024
       },
-      pricepweek: '2,600,000',
+      pricepweek: '3,400,000',
     }];
    

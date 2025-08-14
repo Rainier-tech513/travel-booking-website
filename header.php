@@ -18,15 +18,15 @@
 
 
     <div class="right-side">
-
-        
         <?php
         if (isset($_SESSION["user_id"])) {
         ?>
-            <div class="profile-container">
-                <img src="images/profile-icon.png">
-                <p><?php echo $_SESSION["user_username"]; ?></p>
-            </div>
+            <a href="profile-page.php">
+                <div class="profile-container">
+                    <img src="images/profile-icon.png">
+                    <p><?php echo $_SESSION["user_username"]; ?></p>
+                </div>
+            </a>
         <?php
         } else if (!isset($_SESSION["user_id"])) {
         ?>
@@ -43,8 +43,6 @@
         </div>
 
         <div class="sidebar">
-
-
             <?php
                 if (isset($_SESSION["user_id"])) {
                 ?>

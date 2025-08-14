@@ -1,0 +1,136 @@
+body {
+    background-color: #f9fafb;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row-1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.yacht-gallery img {
+    width: 750px;
+    
+}
+
+
+
+
+
+.row-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0 30px;
+    justify-content: space-between;
+}
+
+.yacht-details {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 38px;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.yacht-details h3 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.all-specs-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    gap: 20px;
+}
+
+.booking-container p {
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.booking-container p span {
+    color: gray;
+    font-size: 16px;
+    font-family: 400;
+}
+
+.booking-container button {
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #FA4616;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+hr {
+    margin: 5px 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    border: none;
+    width: 100%;
+}
+
+.quick-specs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    column-gap: 28px;
+    margin: 0 10px;
+}
+
+.spec {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.spec p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.spec img {
+    width: 26px;
+    vertical-align: middle;
+}
+
+

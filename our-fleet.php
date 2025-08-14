@@ -2,6 +2,18 @@
     require_once 'includes/config-session.php';
     require_once 'includes/signup_view.php';
     require_once 'includes/login_view.php';
+    require_once 'includes/dhb-handler.php';
+
+    try {
+        // Ophalen van alle yachts
+        $stmt = $pdo->query("SELECT * FROM yachts");
+        $yachts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        // Test: even printen
+        // print_r($yachts);
+    } catch (PDOException $e) {
+        echo "Fout bij ophalen yachts: " . $e->getMessage();
+    }
 ?>
 
 
@@ -98,10 +110,48 @@
         </div>
         <div class="yacht-fleet-grid">
             
+        <?php foreach ($yachts as $yacht): ?>
+            <div class="card">
+                <div class="image-card-container">
+                    <img src="<?= htmlspecialchars($yacht['image'] ?? 'images/default-yacht.jpg') ?>" alt="<?= htmlspecialchars($yacht['name']) ?>">
+                    <div class="label">
+                        <p>CHARTER</p>
+                    </div>
+                </div>
+                <div class="text-card-container">
+                    <h3><?= htmlspecialchars($yacht['name']) ?></h3>
+                    <p>From €<?= number_format($yacht['price_per_week'], 2) ?> EUR/per week</p>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <img src="images/size.png" alt="Length">
+                            <p><?= (float)$yacht['length_meters'] ?> m</p>
+                        </div>
+                        <div class="spec">
+                            <img src="images/guests.png" alt="Guests">
+                            <p><?= (int)$yacht['capacity'] ?> Guests</p>
+                        </div>
+                        <div class="spec">
+                            <img src="images/main-bed.png" alt="Cabins">
+                            <p><?= (int)$yacht['cabins'] ?> Cabins</p>
+                        </div>
+                        <div class="spec">
+                            <img src="images/warehouse.png" alt="Built at">
+                            <p><?= htmlspecialchars($yacht['built_at']) ?></p>
+                        </div>
+                        <div class="spec">
+                            <img src="images/calender.png" alt="Built in">
+                            <p><?= (int)$yacht['built_in'] ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+            
         </div>
     </section>
     
 
-    <script type="module" src="javascript/create-yacht-fleet.js"></script>
+    <!--<script type="module" src="javascript/create-yacht-fleet.js"></script>-->
 </body>
 </html>

@@ -48,22 +48,22 @@
                     <div class="detail-container"> <!--flexdirecttion row-->
                         <img src="images/mybookings/guests-iconn.png">
                         <div class="details"> <!--flexdirecttion column-->
-                            <p>Charter Dates</p>
-                            <p>Aug 8 - Aug 15, 2025</p>
+                            <p>Guests</p>
+                            <p>3 guests</p>
                         </div>
                     </div>
                     <div class="detail-container"> <!--flexdirecttion row-->
                         <img src="images/mybookings/location-pin.png">
                         <div class="details"> <!--flexdirecttion column-->
-                            <p>Charter Dates</p>
-                            <p>Aug 8 - Aug 15, 2025</p>
+                            <p>Location</p>
+                            <p>Monaco</p>
                         </div>
                     </div>
                     <div class="detail-container"> <!--flexdirecttion row-->
                         <img src="images/mybookings/clock.png">
                         <div class="details"> <!--flexdirecttion column-->
-                            <p>Charter Dates</p>
-                            <p>Aug 8 - Aug 15, 2025</p>
+                            <p>Booked</p>
+                            <p>Aug 1, 2025</p>
                         </div>
                     </div>
                 </div>
@@ -72,56 +72,7 @@
                 <hr class="booking-container-hr">
                 <div class="special-requests-container">
                     <p>Special Requests:</p>
-                    <p>Shit load of models</p>
-                </div>
-            </div>
-            <div class="booking">
-                <div class="row row-1">
-                    <div class="title">
-                        <p>Flying Fox Yacht</p>
-                        <p>Pending</p>
-                    </div>
-                    <div class="price-container">
-                        <p>€4.200.000</p>
-                        <p>Total Cost</p>
-                    </div>
-                </div>
-                <div class="row row-2">
-                    <div class="detail-container"> <!--flexdirecttion row-->
-                        <img src="images/mybookings/calender2.png">
-                        <div class="details"> <!--flexdirecttion column-->
-                            <p>Charter Dates</p>
-                            <p>Aug 8 - Aug 15, 2025</p>
-                        </div>
-                    </div>
-                    <div class="detail-container"> <!--flexdirecttion row-->
-                        <img src="images/mybookings/guests-iconn.png">
-                        <div class="details"> <!--flexdirecttion column-->
-                            <p>Charter Dates</p>
-                            <p>Aug 8 - Aug 15, 2025</p>
-                        </div>
-                    </div>
-                    <div class="detail-container"> <!--flexdirecttion row-->
-                        <img src="images/mybookings/location-pin.png">
-                        <div class="details"> <!--flexdirecttion column-->
-                            <p>Charter Dates</p>
-                            <p>Aug 8 - Aug 15, 2025</p>
-                        </div>
-                    </div>
-                    <div class="detail-container"> <!--flexdirecttion row-->
-                        <img src="images/mybookings/clock.png">
-                        <div class="details"> <!--flexdirecttion column-->
-                            <p>Charter Dates</p>
-                            <p>Aug 8 - Aug 15, 2025</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!--show code when theres a special request-->
-                <hr class="booking-container-hr">
-                <div class="special-requests-container">
-                    <p>Special Requests:</p>
-                    <p>Shit load of models</p>
+                    <p>a shit load of models on board</p>
                 </div>
             </div>
         </div>

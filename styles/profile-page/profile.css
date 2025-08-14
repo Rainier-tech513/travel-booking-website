@@ -1,0 +1,16 @@
+.setting-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.setting-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    margin: 0px 30px;
+    padding: 38px;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
