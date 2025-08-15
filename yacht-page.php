@@ -68,7 +68,7 @@
                 <p></p>
             </div>
             <div class="booking-container">
-                <p>From €<?= number_format($yacht['price_per_week'], 2) ?> EUR/per week</p>
+                <p>€<?= number_format($yacht['price_per_week'], 2) ?> <span>p/w</span></p>
                 <button>Book Charter</button>
 
                 <hr>
