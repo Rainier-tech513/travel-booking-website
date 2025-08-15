@@ -127,7 +127,7 @@
         </form>
     </div>
 
-    <script src="javascript/openbookingmodel.js"></script>
 
+    <script src="javascript/openbookingmodel.js"></script>
 </body>
 </html>
