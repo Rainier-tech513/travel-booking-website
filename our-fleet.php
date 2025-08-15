@@ -111,7 +111,7 @@
 
             <!--check of dit werkt bij volgende online test-->
             <?php foreach ($yachts as $yacht): ?>
-                <a href="/our-fleet/yacht-page.php?slug=<?= urlencode($yacht['slug']) ?>" class="yacht-card-aelement">
+                <a href="yacht-page.php?slug=<?= urlencode($yacht['slug']) ?>" class="yacht-card-aelement">
                     <div class="card">
                         <div class="image-card-container">
                         <img src="<?= htmlspecialchars($yacht['yacht_img'] ?? 'images/default-yacht.jpg') ?>" 
