@@ -89,11 +89,45 @@
                 </div>
                 
             </div>
-        </div>
-        
+        </div> 
     </section>
 
+    <!-- overlay -->
+    <div class="overlay" id="overlay"></div>
 
+    <!-- modal container -->
+    <div class="modal" id="modal">
+        <img src="images/close-sidebar-cross.png" class="close-btn" id="close-modal">
+        <h2>Book <?= htmlspecialchars($yacht['name']) ?></h2>
+        <form>
+            <label for="start-date">Start Date
+                <input type="date" id="start-date" required>
+            </label>
+
+            <label for="end-date">End Date
+                <input type="date" id="end-date">
+            </label>
+
+            <label for="guests">Number of Guests
+                <input type="number" id="guests" min="1" placeholder="8" required>
+            </label>
+
+            <label for="pickup">Pickup Location
+                <input type="text" id="pickup" placeholder="Monaco" required>
+            </label>
+
+            <label for="requests">Special Requests
+                <textarea id="requests" placeholder="Any special requirements or preferences..."></textarea>
+            </label>
+
+            <div class="btn-container">
+                <button class="cancel-btn">Cancel</button>
+                <button class="submit-btn">Confirm Booking</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="javascript/openbookingmodel.js"></script>
 
 </body>
 </html>
