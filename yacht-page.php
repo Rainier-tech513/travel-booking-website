@@ -37,38 +37,38 @@
     <section>
         <div class="row-1">
             <div class="yacht-gallery">
-                <img src="images/flying-fox-yacht.png">
+            <img src="<?= htmlspecialchars($yacht['yacht_img'] ?? 'images/default-yacht.jpg') ?>">
             </div>
         </div>
         <div class="row-2">
             <div class="yacht-details">
-                <h3>Flying Fox</h3>
+                <h3><?= htmlspecialchars($yacht['name']) ?></h3>
                 <div class="all-specs-grid">
                     <div class="spec">
                         <img src="images/size.png">
-                        <p>149m (446ft)</p>
+                        <p><?= (float)$yacht['length_meters'] ?>m &lpar;<?= (float)$yacht['length_feet'] ?>ft&rpar;</p>
                     </div>
                     <div class="spec">
                         <img src="images/guests.png">
-                        <p>22 Guests</p>
+                        <p><?= (int)$yacht['capacity'] ?> Guests</p>
                     </div>
                     <div class="spec">
                         <img src="images/main-bed.png">
-                        <p>11 Cabins</p>
+                        <p><?= (int)$yacht['cabins'] ?> Cabins</p>
                     </div>
                     <div class="spec">
                         <img src="images/warehouse.png">
-                        <p>Lurssen</p>
+                        <p><?= htmlspecialchars($yacht['built_at']) ?></p>
                     </div>
                     <div class="spec">
                         <img src="images/calender.png">
-                        <p>2019</p>
+                        <p><?= (int)$yacht['built_in'] ?></p>
                     </div>
                 </div>
                 <p></p>
             </div>
             <div class="booking-container">
-                <p>€4.200.000 <span>p/w</span></p>
+                <p>From €<?= number_format($yacht['price_per_week'], 2) ?> EUR/per week</p>
                 <button>Book Charter</button>
 
                 <hr>
@@ -76,15 +76,15 @@
                 <div class="quick-specs-grid">
                     <div class="spec">
                         <img src="images/guests.png">
-                        <p>22 Guests</p>
+                        <p><?= (int)$yacht['capacity'] ?> Guests</p>
                     </div>
                     <div class="spec">
                         <img src="images/main-bed.png">
-                        <p>11 Cabins</p>
+                        <p><?= (int)$yacht['cabins'] ?> Cabins</p>
                     </div>
                     <div class="spec">
                         <img src="images/size.png">
-                        <p>139m (446ft)</p>
+                        <p><?= (float)$yacht['length_meters'] ?>m &lpar;<?= (float)$yacht['length_feet'] ?>ft&rpar;</p>
                     </div>
                 </div>
                 
